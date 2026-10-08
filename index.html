@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==============================
+       WEBSITE TITLE
+       ============================== -->
+  <title>Surya Shop | Enterprise E-Commerce & Analytics</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       HEADER BAR
+       ========================================================= -->
+
+  <header class="header">
+
+    <div class="nav-container">
+
+      <!-- =====================================================
+           SHOP LOGO / BRAND NAME
+           ===================================================== -->
+
+      <a href="#" class="logo" id="logoBrand">
+
+        <i class="fa-solid fa-bag-shopping text-gradient"></i>
+
+        Surya <span>Shop</span>
+
+      </a>
+
+
+      <!-- =====================================================
+           NAVIGATION LINKS
+           ===================================================== -->
+
+      <div
+        class="header-nav-links"
+        id="headerLinks"
+        style="display: none;"
+      >
+
+        <button
+          class="nav-btn active"
+          id="btnGoShop"
+        >
+
+          <i class="fa-solid fa-store"></i>
+
+          Shop
+
+        </button>
+
+
+        <button
+          class="nav-btn"
+          id="btnGoOrders"
+        >
+
+          <i class="fa-solid fa-receipt"></i>
+
+          Orders
+
+        </button>
+
+
+        <button
+          class="nav-btn"
+          id="btnGoAdmin"
+          style="display: none;"
+        >
+
+          <i class="fa-solid fa-chart-pie"></i>
+
+          Analytics
+
+        </button>
+
+      </div>
+
+
+      <!-- =====================================================
+           HEADER ACTIONS
+           ===================================================== -->
+
+      <div class="nav-actions">
+
+        <div
+          class="user-session"
+          id="userSession"
+        >
+          <!-- Dynamically populated session details -->
+        </div>
+
+
+        <button
+          class="cart-btn"
+          id="openCartDrawerBtn"
+        >
+
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          Cart
+
+          <span
+            class="cart-badge"
+            id="cartBadgeCount"
+          >
+            0
+          </span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================================================
+       MAIN VIEW CONTAINER
+       ========================================================= -->
+
+  <main
+    class="main-content"
+    id="main-content"
+  >
+
+
+    <!-- =======================================================
+         1. AUTHENTICATION VIEW
+         ======================================================= -->
+
+    <div
+      id="authView"
+      class="view container"
+    >
+
+      <div class="auth-card">
+
+
+        <!-- Authentication Tabs -->
+
+        <div class="auth-tabs">
+
+          <button
+            class="auth-tab active"
+            id="tabLogin"
+          >
+            Sign In
+          </button>
+
+
+          <button
+            class="auth-tab"
+            id="tabRegister"
+          >
+            Sign Up
+          </button>
+
+        </div>
+
+
+
+        <!-- ===================================================
+             LOGIN FORM
+             =================================================== -->
+
+        <form
+          id="loginForm"
+          class="auth-form active"
+        >
+
+          <h3 class="auth-title">
+            Welcome Back
+          </h3>
+
+
+          <p class="auth-subtitle">
+            Log in to your account to start shopping
+          </p>
+
+
+
+          <!-- Email -->
+
+          <div class="form-group">
+
+            <label for="loginEmail">
+              Email Address
+            </label>
+
+
+            <input
+              type="email"
+              id="loginEmail"
+              required
+              placeholder="name@example.com"
+            >
+
+          </div>
+
+
+
+          <!-- Password -->
+
+          <div class="form-group">
+
+            <label for="loginPassword">
+              Password
+            </label>
+
+
+            <input
+              type="password"
+              id="loginPassword"
+              required
+              placeholder="••••••••"
+            >
+
+          </div>
+
+
+
+          <!-- Sign In Button -->
+
+          <button
+            type="submit"
+            class="btn btn-primary w-full"
+          >
+
+            Sign In
+
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+          </button>
+
+        </form>
+
+
+
+        <!-- ===================================================
+             REGISTER FORM
+             =================================================== -->
+
+        <form
+          id="registerForm"
+          class="auth-form"
+        >
+
+          <h3 class="auth-title">
+            Create Account
+          </h3>
+
+
+          <p class="auth-subtitle">
+            Join us and access premium tech peripherals
+          </p>
+
+
+
+          <!-- Full Name -->
+
+          <div class="form-group">
+
+            <label for="regName">
+              Full Name
+            </label>
+
+
+            <input
+              type="text"
+              id="regName"
+              required
+              placeholder="John Doe"
+            >
+
+          </div>
+
+
+
+          <!-- Email -->
+
+          <div class="form-group">
+
+            <label for="regEmail">
+              Email Address
+            </label>
+
+
+            <input
+              type="email"
+              id="regEmail"
+              required
+              placeholder="name@example.com"
+            >
+
+          </div>
+
+
+
+          <!-- Password -->
+
+          <div class="form-group">
+
+            <label for="regPassword">
+              Password
+            </label>
+
+
+            <input
+              type="password"
+              id="regPassword"
+              required
+              placeholder="••••••••"
+            >
+
+          </div>
+
+
+
+          <!-- Account Type -->
+
+          <div class="form-group">
+
+            <label for="regRole">
+              Account Type
+            </label>
+
+
+            <select id="regRole">
+
+              <option value="customer">
+                Customer
+              </option>
+
+
+              <option value="admin">
+                Administrator
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- Sign Up Button -->
+
+          <button
+            type="submit"
+            class="btn btn-primary w-full"
+          >
+
+            Sign Up
+
+            <i class="fa-solid fa-user-plus"></i>
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =======================================================
+         2. STOREFRONT VIEW
+         ======================================================= -->
+
+    <div
+      id="shopView"
+      class="view container"
+      style="display: none;"
+    >
+
+
+      <!-- Store Welcome -->
+
+      <div class="shop-welcome">
+
+        <h2>
+          Premium Tech Store
+        </h2>
+
+
+        <p>
+          Curated list of professional hardware and desk peripherals.
+        </p>
+
+      </div>
+
+
+
+      <!-- Filter Bar -->
+
+      <div class="filter-bar">
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+
+          <input
+            type="text"
+            id="shopSearch"
+            placeholder="Search tech items..."
+          >
+
+        </div>
+
+
+
+        <!-- Categories -->
+
+        <div
+          class="category-filters"
+          id="shopCategories"
+        >
+
+          <button
+            class="cat-btn active"
+            data-cat="All"
+          >
+            All
+          </button>
+
+
+          <button
+            class="cat-btn"
+            data-cat="Peripherals"
+          >
+            Peripherals
+          </button>
+
+
+          <button
+            class="cat-btn"
+            data-cat="Displays"
+          >
+            Displays
+          </button>
+
+
+          <button
+            class="cat-btn"
+            data-cat="Accessories"
+          >
+            Accessories
+          </button>
+
+
+          <button
+            class="cat-btn"
+            data-cat="Audio"
+          >
+            Audio
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Products -->
+
+      <div
+        class="products-grid"
+        id="productsGrid"
+      >
+      </div>
+
+    </div>
+
+
+
+    <!-- =======================================================
+         3. CUSTOMER ORDERS VIEW
+         ======================================================= -->
+
+    <div
+      id="ordersView"
+      class="view container"
+      style="display: none;"
+    >
+
+      <div class="shop-welcome">
+
+        <h2>
+          Your Purchase History
+        </h2>
+
+
+        <p>
+          Review orders, transaction details, and simulated email confirmation logs.
+        </p>
+
+      </div>
+
+
+      <div
+        class="orders-list"
+        id="customerOrdersList"
+      >
+      </div>
+
+    </div>
+
+
+
+    <!-- =======================================================
+         4. ADMIN ANALYTICS VIEW
+         ======================================================= -->
+
+    <div
+      id="adminView"
+      class="view container"
+      style="display: none;"
+    >
+
+
+      <!-- Admin Header -->
+
+      <div class="shop-welcome admin">
+
+        <div>
+
+          <h2>
+            Business Intelligence Dashboard
+          </h2>
+
+
+          <p>
+            Real-time telemetry, transaction metrics, and product inventories.
+          </p>
+
+        </div>
+
+
+        <button
+          class="btn btn-primary"
+          id="openProductModalBtn"
+        >
+
+          <i class="fa-solid fa-plus"></i>
+
+          Add New Product
+
+        </button>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           KPI GRID
+           =================================================== -->
+
+      <div class="kpi-grid">
+
+
+        <!-- Total Sales -->
+
+        <div class="kpi-card">
+
+          <span class="kpi-title">
+
+            <i class="fa-solid fa-chart-line text-gradient"></i>
+
+            Total Sales
+
+          </span>
+
+
+          <span
+            class="kpi-val"
+            id="kpiTotalSales"
+          >
+            $0.00
+          </span>
+
+        </div>
+
+
+
+        <!-- Orders -->
+
+        <div class="kpi-card">
+
+          <span class="kpi-title">
+
+            <i class="fa-solid fa-boxes-stacked text-gradient"></i>
+
+            Orders Processed
+
+          </span>
+
+
+          <span
+            class="kpi-val"
+            id="kpiTotalOrders"
+          >
+            0
+          </span>
+
+        </div>
+
+
+
+        <!-- Average Order -->
+
+        <div class="kpi-card">
+
+          <span class="kpi-title">
+
+            <i class="fa-solid fa-wallet text-gradient"></i>
+
+            Avg Order Value
+
+          </span>
+
+
+          <span
+            class="kpi-val"
+            id="kpiAvgOrder"
+          >
+            $0.00
+          </span>
+
+        </div>
+
+
+
+        <!-- Active Clients -->
+
+        <div class="kpi-card">
+
+          <span class="kpi-title">
+
+            <i class="fa-solid fa-users text-gradient"></i>
+
+            Active Clients
+
+          </span>
+
+
+          <span
+            class="kpi-val"
+            id="kpiTotalCustomers"
+          >
+            0
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           CANVAS CHARTS
+           =================================================== -->
+
+      <div class="charts-grid">
+
+
+        <!-- Sales Trend -->
+
+        <div class="chart-card">
+
+          <h4>
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            Sales Trends (Past 7 Days)
+
+          </h4>
+
+
+          <div class="canvas-container">
+
+            <canvas
+              id="salesTrendChart"
+              width="500"
+              height="250"
+            >
+            </canvas>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Top Products -->
+
+        <div class="chart-card">
+
+          <h4>
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            Revenue share by Top Product
+
+          </h4>
+
+
+          <div class="canvas-container">
+
+            <canvas
+              id="topProductsChart"
+              width="500"
+              height="250"
+            >
+            </canvas>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           INVENTORY TABLE
+           =================================================== -->
+
+      <div class="admin-inventory-card">
+
+
+        <div class="card-header">
+
+          <h3>
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            Catalog Inventory Status
+
+          </h3>
+
+        </div>
+
+
+
+        <div class="table-wrapper">
+
+          <table class="data-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Product
+                </th>
+
+                <th>
+                  Category
+                </th>
+
+                <th>
+                  Price
+                </th>
+
+                <th>
+                  Stock
+                </th>
+
+                <th style="text-align: right;">
+                  Actions
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody
+              id="adminProductsTable"
+            >
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- =========================================================
+       SHOPPING CART SLIDE OUT DRAWER
+       ========================================================= -->
+
+  <div
+    class="cart-drawer-overlay"
+    id="cartDrawerOverlay"
+  >
+
+    <div
+      class="cart-drawer"
+      id="cartDrawer"
+    >
+
+
+      <!-- Cart Header -->
+
+      <div class="cart-drawer-header">
+
+        <h3>
+
+          <i class="fa-solid fa-shopping-cart"></i>
+
+          Your Cart
+
+        </h3>
+
+
+        <button
+          class="close-drawer-btn"
+          id="closeCartDrawerBtn"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+
+      <!-- Cart Items -->
+
+      <div
+        class="cart-drawer-items"
+        id="cartDrawerItems"
+      >
+      </div>
+
+
+
+      <!-- Cart Footer -->
+
+      <div class="cart-drawer-footer">
+
+
+        <div class="cart-summary-row">
+
+          <span>
+            Subtotal:
+          </span>
+
+
+          <strong id="cartSubtotal">
+            $0.00
+          </strong>
+
+        </div>
+
+
+
+        <button
+          class="btn btn-primary w-full"
+          id="checkoutBtn"
+          disabled
+        >
+
+          Proceed to Checkout
+
+          <i class="fa-solid fa-credit-card"></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       CHECKOUT MODAL
+       ========================================================= -->
+
+  <div
+    class="modal-overlay"
+    id="checkoutModal"
+  >
+
+    <div class="modal-card">
+
+
+      <!-- Modal Header -->
+
+      <div class="modal-header">
+
+        <h3>
+
+          <i class="fa-solid fa-lock text-gradient"></i>
+
+          Stripe Secure Checkout
+
+        </h3>
+
+
+        <button
+          class="close-modal-btn"
+          id="closeCheckoutModalBtn"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+
+      <!-- Checkout Form -->
+
+      <form id="checkoutForm">
+
+
+        <!-- Total -->
+
+        <div class="checkout-summary-box">
+
+          <span>
+            Total Charged:
+          </span>
+
+
+          <strong id="checkoutTotalVal">
+            $0.00
+          </strong>
+
+        </div>
+
+
+
+        <!-- Cardholder Name -->
+
+        <div class="form-group">
+
+          <label for="cardName">
+            Cardholder Name
+          </label>
+
+
+          <input
+            type="text"
+            id="cardName"
+            required
+            placeholder="Likhith"
+          >
+
+        </div>
+
+
+
+        <!-- Card Number -->
+
+        <div class="form-group">
+
+          <label for="cardNumber">
+            Card Number
+          </label>
+
+
+          <div class="input-icon-wrapper">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+
+            <input
+              type="text"
+              id="cardNumber"
+              required
+              placeholder="4242 4242 4242 4242"
+              maxlength="19"
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Expiry + CVC -->
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label for="cardExpiry">
+              Expiration Date
+            </label>
+
+
+            <input
+              type="text"
+              id="cardExpiry"
+              required
+              placeholder="MM/YY"
+              maxlength="5"
+            >
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="cardCvv">
+              CVC
+            </label>
+
+
+            <input
+              type="text"
+              id="cardCvv"
+              required
+              placeholder="123"
+              maxlength="3"
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Modal Actions -->
+
+        <div class="modal-actions">
+
+          <button
+            type="button"
+            class="btn btn-outline"
+            id="cancelCheckoutBtn"
+          >
+            Cancel
+          </button>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="placeOrderBtn"
+          >
+            Pay & Place Order
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       PRODUCT CRUD MODAL
+       ========================================================= -->
+
+  <div
+    class="modal-overlay"
+    id="productModal"
+  >
+
+    <div class="modal-card">
+
+
+      <!-- Product Modal Header -->
+
+      <div class="modal-header">
+
+        <h3 id="productModalTitle">
+          Add New Product
+        </h3>
+
+
+        <button
+          class="close-modal-btn"
+          id="closeProductModalBtn"
+        >
+          &times;
+        </button>
+
+      </div>
+
+
+
+      <!-- Product Form -->
+
+      <form id="productForm">
+
+
+        <!-- Hidden Product ID -->
+
+        <input
+          type="hidden"
+          id="editProductId"
+        >
+
+
+
+        <!-- Product Name -->
+
+        <div class="form-group">
+
+          <label for="productName">
+            Product Name
+          </label>
+
+
+          <input
+            type="text"
+            id="productName"
+            required
+            placeholder="e.g. Mechanical Keyboard"
+          >
+
+        </div>
+
+
+
+        <!-- Price + Stock -->
+
+        <div class="form-row">
+
+
+          <div class="form-group">
+
+            <label for="productPrice">
+              Price ($)
+            </label>
+
+
+            <input
+              type="number"
+              step="0.01"
+              id="productPrice"
+              required
+              placeholder="89.99"
+            >
+
+          </div>
+
+
+
+          <div class="form-group">
+
+            <label for="productStock">
+              Stock Count
+            </label>
+
+
+            <input
+              type="number"
+              id="productStock"
+              required
+              placeholder="25"
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Product Category -->
+
+        <div class="form-group">
+
+          <label for="productCategory">
+            Category
+          </label>
+
+
+          <select id="productCategory">
+
+            <option value="Peripherals">
+              Peripherals
+            </option>
+
+
+            <option value="Displays">
+              Displays
+            </option>
+
+
+            <option value="Accessories">
+              Accessories
+            </option>
+
+
+            <option value="Audio">
+              Audio
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <!-- Product Image -->
+
+        <div class="form-group">
+
+          <label for="productImage">
+            Product Image
+          </label>
+
+
+          <input
+            type="file"
+            id="productImage"
+            accept="image/*"
+          >
+
+
+          <input
+            type="hidden"
+            id="productImageUrl"
+          >
+
+
+          <small
+            id="uploadStatusText"
+            style="color: var(--text-muted); margin-top: 0.3rem; display: block;"
+          >
+          </small>
+
+        </div>
+
+
+
+        <!-- Product Description -->
+
+        <div class="form-group">
+
+          <label for="productDescription">
+            Product Description
+          </label>
+
+
+          <textarea
+            id="productDescription"
+            required
+            rows="4"
+            placeholder="Enter specifications details..."
+          ></textarea>
+
+        </div>
+
+
+
+        <!-- Product Modal Buttons -->
+
+        <div class="modal-actions">
+
+          <button
+            type="button"
+            class="btn btn-outline"
+            id="cancelProductBtn"
+          >
+            Cancel
+          </button>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            id="saveProductBtn"
+          >
+            Save Product
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       TOAST NOTIFICATION
+       ========================================================= -->
+
+  <div
+    id="toast"
+    class="toast"
+  >
+  </div>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
